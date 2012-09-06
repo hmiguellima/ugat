@@ -1,0 +1,113 @@
+body {
+	width:100%;
+	height:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	overflow:auto;
+	overflow-y: hidden;
+}
+
+.ugat-Menu {
+	position:relative;
+	width:100%;
+	height:30px;
+	left:0px;
+	top:0px;
+}
+
+.ugat-Modulo {
+	position:relative;
+	width:100%;
+	height:100%;
+	margin-top:-30px;
+	padding-top:30px;
+	z-index:-1;
+	left:0px;
+	top:0px;
+}
+
+.ugat-Controller {
+  position:relative;
+  width:100%;
+  height:110px;
+	left:0px;
+	top:0px;
+}
+
+.ugat-Work {
+	position:relative;
+	width:100%;
+	height:100%;
+	margin-top:-110px;
+	padding-top:110px;
+	z-index:-1;
+	left:0px;
+	top:0px;
+}
+
+.ugat-WorkPanel {
+	background-color:#F9FDFE;
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	left:0px;
+	top:0px;
+}
+
+.ugat-ModalDialog-BorderInnerPanel {
+  position:relative;
+  width:100%;
+  height:100%;
+	background-color:white;
+	border-style:solid;
+	border-color:#D4D0C8;
+	border-width:2px;
+	left:0px;
+	top:0px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+.ugat-ModalDialog-Footer {
+	position:absolute;
+	width:100%;
+	bottom:0px;
+	height:30px;
+	border-top-style:ridge;
+	border-width:2px;
+	background-color:#D4D0C8;
+	padding:2px 4px 2px 4px;
+	left:0px;
+}
+
+.ugat-ModalDialog-Center {
+	position:relative;
+	width:100%;
+	height:100%;
+	padding-bottom:31px;
+	overflow:auto;
+	padding:3px;
+	left:0px;
+	top:0px;
+}
+
+.ugat-PropertiesPanel {
+  position:relative;
+  width:100%;
+  height:100%;
+	left:0px;
+	top:0px;
+}
+
+.ugat-Form {
+	position:relative;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+}
+
+.ucpgwt-MVCTable td {
+  font:normal 12px verdana;
+}

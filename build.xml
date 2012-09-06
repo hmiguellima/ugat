@@ -1,0 +1,46 @@
+<project name="UGAT" default="dist" basedir=".">
+	<!-- Include property values -->
+	<property file="build.properties"/>
+
+	<!-- Java Compile Classpath -->
+	<path id="compile.classpath">
+	    <fileset dir="${lib.dir}" includes="**/*.jar"/>
+		<pathelement path="${java.class.path}/"/>
+	</path>
+	
+	<!-- Delete everything this build.xml created -->
+	<target name="clean"
+		description="Clean all build directories">
+		<delete dir="${dist.dir}"/>
+		<delete dir="${build.dir}"/>
+	</target>
+	
+	<target name="prepare" depends="clean">
+		<mkdir dir="${dist.dir}"/>
+		<mkdir dir="${build.dir}"/>
+	</target>
+
+	<target name="static-copy" depends="prepare">
+		<copy todir="${build.dir}">
+			<fileset dir="${src.dir}"/>
+		</copy>
+	</target>
+
+	<target  name="java-compile" depends="static-copy"
+	         description="Compile application components">
+	    <javac      srcdir="${src.dir}"
+	               destdir="${build.dir}"
+	                 debug="${compile.debug}"
+	           deprecation="${compile.deprecation}"
+	              optimize="${compile.optimize}"
+	                source="${project.source}"
+	                target="${project.target}"
+	    	  	  encoding="${compile.encoding}">
+	      <classpath refid="compile.classpath" />
+	    </javac>
+	</target>
+	
+	<target name="dist" depends="java-compile" description="Create jar lib distribution">
+		<jar jarfile="${dist.dir}/ugat.jar" basedir="${build.dir}"/>
+	</target>
+</project>

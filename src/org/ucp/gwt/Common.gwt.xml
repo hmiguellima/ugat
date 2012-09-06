@@ -1,0 +1,12 @@
+<module>
+	<inherits name='com.google.gwt.json.JSON'/>
+	
+	<!-- Source Paths -->
+	<source path="util"/> 
+	<source path="widgets"/> 
+
+	<!--  Resource injection -->
+	<stylesheet src="ucpgwt.css"/>
+	<stylesheet src="calendar.css"/>
+	<script src="calendar.js"/>
+</module>

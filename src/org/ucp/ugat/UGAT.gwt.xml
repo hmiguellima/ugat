@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<inherits name='org.ucp.gwt.Common'/>
+	<inherits name="com.google.gwt.logging.Logging"/>	
+
+	<!-- Source Paths -->
+	<source path="client"/> 
+	<source path="core"/> 
+</module>

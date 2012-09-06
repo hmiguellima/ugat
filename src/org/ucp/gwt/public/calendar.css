@@ -1,0 +1,43 @@
+.DatePicker /* main datepicker style */
+{
+	background-color: #deffde;
+	font:bold 10px verdana;
+	padding:1px;
+	border:1px solid #252525;
+}
+
+.DatePickerTable /* style for table */
+{
+	background-color: #d0eed0;
+	font:bold 10px verdana;
+}
+
+.DatePickerHdr /* style for the header row */
+{
+ 	background-color: #c0ffc0;
+}
+
+.DatePickerHdrBtn /* style for buttons in the header row */
+{
+	cursor: pointer;
+	font:normal 12px verdana;
+}
+
+.DatePickerHdrLabel /* style for labels in the header row */
+{
+	font:normal 12px verdana;
+}
+
+.DatePickerBtn /* style for the calendar area */
+{
+	background-color: white;
+	cursor: pointer;
+	font:normal 9px verdana;
+}
+
+.DatePickerBtnSelect /* highlighted date */
+{
+ 	background-color: #c0c0ff;
+	font:normal 9px verdana;
+ 	cursor: pointer;
+}

@@ -1,0 +1,540 @@
+/* -------------------------------------------------------------------------- */
+/* Override dos estilos base do GWT                                           */
+/* -------------------------------------------------------------------------- */
+
+html {
+  font: normal 12px verdana;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font: normal 12px verdana;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+code {
+  font: normal 12px verdana;
+}
+
+a {
+  color: darkblue;
+}
+
+a:visited {
+  color: darkblue;
+}
+
+.gwt-BorderedPanel {
+}
+
+.gwt-Button {
+  background:#dddddd url('img/bg-btn.gif') repeat-x 0 0;
+  margin:2px 2px 5px 2px;
+  font:12px Arial,Sans-serif;
+  text-decoration:none;
+  color:#222;
+  outline:none;  
+  cursor:pointer;
+  padding:1px 4px 2px 4px;
+  border:solid #aaa;
+  border-width:1px;
+}
+
+.gwt-Button:Hover {
+	text-decoration:underline;
+  border-color:#9cf #69e #69e #7af;
+}
+
+.gwt-Canvas {
+}
+
+.gwt-CheckBox {
+  font: normal 12px verdana;
+}
+
+.gwt-DialogBox .Caption {
+  background: #e3e8f3 url(img/hborder.png) repeat-x 0px -2003px;
+  padding: 4px 4px 4px 8px;
+  cursor: default;
+  border-bottom: 1px solid #bbbbbb;
+  border-top: 5px solid #d0e4f6;
+  font: normal 12px verdana;
+}
+
+.gwt-DialogBox .dialogContent {
+}
+.gwt-DialogBox .dialogMiddleCenter {
+  padding: 3px;
+  background: white;
+}
+html>body .gwt-DialogBox .dialogBottomCenter {
+  background: url(img/hborder.png) repeat-x 0px -4px;
+}
+* html .gwt-DialogBox .dialogBottomCenter {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/hborder_blue_shadow.png',sizingMethod='scale');
+}
+.gwt-DialogBox .dialogMiddleLeft {
+  background: url(img/vborder.png) repeat-y;
+}
+html>body .gwt-DialogBox .dialogMiddleRight {
+  background: url(img/vborder.png) repeat-y -4px 0px;
+}
+* html .gwt-DialogBox .dialogMiddleRight {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/vborder_blue_shadow.png',sizingMethod='scale');
+}
+.gwt-DialogBox .dialogTopLeftInner {
+  width: 5px;
+  zoom: 1;
+}
+.gwt-DialogBox .dialogTopRightInner {
+  width: 8px;
+  zoom: 1;
+}
+.gwt-DialogBox .dialogBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+.gwt-DialogBox .dialogBottomRightInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+html>body .gwt-DialogBox .dialogTopLeft {
+  background: url(img/corner.png) no-repeat -13px 0px;
+}
+html>body .gwt-DialogBox .dialogTopRight {
+  background: url(img/corner.png) no-repeat -18px 0px;
+}
+html>body .gwt-DialogBox .dialogBottomLeft {
+  background: url(img/corner.png) no-repeat 0px -15px;
+}
+html>body .gwt-DialogBox .dialogBottomRight {
+  background: url(img/corner.png) no-repeat -5px -15px;
+}
+* html .gwt-DialogBox .dialogTopLeft {
+  width: 5px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/corner_dialog_topleft.png',sizingMethod='crop');
+}
+* html .gwt-DialogBox .dialogTopRight {
+  width: 8px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/corner_dialog_topright.png',sizingMethod='crop');
+}
+* html .gwt-DialogBox .dialogBottomLeftInner {
+  width: 5px;
+  height: 23px;
+  margin-top: -15px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/corner.png',sizingMethod='crop');
+}
+* html .gwt-DialogBox .dialogBottomRightInner {
+  width: 13px;
+  height: 23px;
+  margin-left: -5px;
+  margin-top: -15px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/corner.png',sizingMethod='crop');
+}
+
+.gwt-FileUpload {
+}
+
+.gwt-Frame {
+}
+
+.gwt-HorizontalSplitter .Bar {
+  width: 8px;
+  background-color: #C3D9FF;
+}
+
+.gwt-VerticalSplitter .Bar {
+  height: 8px;
+  background-color: #C3D9FF;
+}
+
+.gwt-HTML {
+}
+
+.gwt-Hyperlink {
+}
+
+.gwt-Image {
+}
+
+.gwt-Label {
+  font: normal 12px verdana;
+}
+
+.gwt-ListBox {
+}
+
+.gwt-MenuBar {
+  background-color: #C3D9FF;
+  border: 1px solid #87B3FF;
+  cursor: default;
+}
+
+.gwt-MenuBar .gwt-MenuItem {
+  padding: 1px 4px 1px 4px;
+  cursor: default;
+  font: normal 12px verdana;
+}
+
+.gwt-MenuBar .gwt-MenuItem-selected {
+  background-color: #E8EEF7;
+}
+
+.gwt-PasswordTextBox {
+}
+
+.gwt-RadioButton {
+}
+
+.gwt-TabPanel {
+	padding-top: 2px;
+}
+
+.gwt-TabPanelBottom {
+  border-left: 1px solid #87B3FF;
+  padding: 4px;
+}
+
+.gwt-TabBar {
+	font:10px verdana;
+}
+
+.gwt-TabBar .gwt-TabBarFirst {
+  height: 100%;
+  border-bottom: 1px solid #87B3FF;
+  padding-left: 3px;
+}
+
+.gwt-TabBar .gwt-TabBarRest {
+  border-bottom: 1px solid #87B3FF;
+  padding-right: 3px;
+}
+
+.gwt-TabBar .gwt-TabBarItem {
+	font:normal 12px Verdana;
+  border-top: 1px solid #C3D9FF;
+  border-left: 4px double #C3D9FF;
+  border-bottom: 1px solid #87B3FF;
+  border-right: 1px solid #87B3FF;
+  padding-left: 3px;
+  padding-right: 3px;
+  cursor: pointer;
+  margin-left:1px;
+  margin-right:1px;
+}
+
+.gwt-TabBar .gwt-TabBarItem-selected {
+	font:bold 12px Verdana;
+  background-color: #E8EEF7;
+  border-top: 1px solid #87B3FF;
+  border-left: 1px solid #87B3FF;
+  border-right: 1px solid #87B3FF;
+  border-bottom: 1px solid #E8EEF7;
+  padding: 2px;
+  cursor: default;
+  margin-left:2px;
+  margin-right:2px;
+}
+
+.gwt-TextArea {
+}
+
+.gwt-TextBox {
+}
+
+.gwt-Tree {
+}
+
+.gwt-Tree .gwt-TreeItem {
+}
+
+.gwt-Tree .gwt-TreeItem-selected {
+	background-color: #F0F0F0;
+	border: 1px solid #A0A0A0;
+}
+
+.gwt-StackPanel {
+  background: #fff;
+  width: 15em;
+  border-bottom: 1px solid #666;
+}
+
+.gwt-StackPanel .gwt-StackPanelItem {
+  cursor: pointer;
+  cursor: hand;
+  background: url(img/gradient.gif) repeat-x top left;
+  font: 12px verdana;
+  text-align:center;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+
+.gwt-StackPanel .gwt-StackPanelItem-selected {
+  border-bottom: 1px solid #666;
+  background: url(img/gradient.gif) repeat-x top left;
+  font: Bold 12px verdana;
+  text-align:center;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+
+.gwt-StackPanel .gwt-StackPanelItem table {
+  width: 100%;
+}
+
+.gwt-HorizontalSplitPanel {
+}
+
+.gwt-HorizontalSplitPanel .hsplitter {
+	margin-left:4px;
+	margin-right:2px;
+	border-left: 1px solid #C2D8F0;
+  cursor: move;
+  background-color: #F0F0F0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Estilos do UGAT                                                            */
+/* -------------------------------------------------------------------------- */
+
+.ugat-Menu {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:30px;
+}
+
+.ugat-Modulo {
+	position:absolute;
+	top:30px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+}
+
+.ugat-Controller {
+  position:absolute;
+  left:0px;
+  right:0px;
+  top:0px;
+  height:120px;	
+}
+
+.ugat-Work {
+	position:absolute;
+	left:0px;
+	right:0px;
+	top:98px;
+	bottom:0px;
+}
+
+.ugat-TopPanel {
+	background-color:#CEE0F2;
+	width:100%;
+	padding-top:5px;
+}
+
+.ugat-TopPanel-Title {
+	font:bold 20px verdana;
+	white-space: nowrap;
+	overflow: hidden; 
+}
+
+.ugat-TopPanel-TitleIcon {
+	vertical-align:middle;
+	width:48px;
+	height:48px;
+}
+
+.ugat-TopPanel-Welcome {
+	font:normal 12px verdana;
+	white-space:nowrap;
+}
+
+.ugat-TopPanel-Links {
+	font:bold 12px Verdana;
+	float:right;
+	padding-left:5px;
+	white-space: nowrap;
+}
+
+.ugat-WithPadding {
+	padding-left:10px;
+	padding-top:10px;
+}
+
+.ugat-Form {
+	position: absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+}
+
+.ugat-WorkPanel {
+	background-color:#F9FDFE;
+	position:absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	overflow:auto;
+}
+
+.ucpgwt-ImageButton {
+	background:#dddddd url('img/bg-btn.gif') repeat-x 0 0;
+}
+
+.ugat-ModalDialog-FocusPanel {
+	border: 0;
+	margin: 0;
+	padding: 0;	
+}
+
+.ucpgwt-ModalDialog-Footer {
+	background-color:#F7F7F7;
+}
+
+.ugat-ModalDialog-LightBox {
+	background-image: url("img/transparent.gif");
+  	background-repeat: repeat;
+ 	visibility: visible; 
+ 	position: absolute; 
+ 	width: 100%; 
+  	height: 100%; 
+  	left: 0px; 
+  	top: 0px;	
+  	cursor: wait;
+}
+
+.ugat-ModalDialog-BorderInnerPanel {
+	background-color:white;
+	border-style:solid;
+	border-color:#D4D0C8;
+	border-width:2px;
+	position:relative;
+}
+
+.ugat-ModalDialog-Footer {
+	position:absolute;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	height:30px;
+	border-top-style:ridge;
+	border-width:2px;
+	background-color:#D4D0C8;
+	padding:2px 4px 2px 4px;
+}
+
+.ugat-ModalDialog-Center {
+	position:absolute;
+	left:0px;
+	top:4px;
+	right:0px;
+	bottom:31px;
+	overflow:auto;
+	padding:3px;
+}
+
+.ugat-ModalDialog-AceitarBtn {
+	float:right;
+	margin:2px;
+}
+
+.ugat-ModalDialog-CancelarBtn {
+	float:right;
+	margin:2px;
+}
+
+.ugat-PropertiesPanel {
+	position:absolute;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	right:0px;
+}
+
+.ugat-Blink {
+	color: gray ! important;
+	background-color: white;	
+}
+
+.ugat-DefaultButton {
+	border: 1px solid black;
+}
+
+.ugat-ModalDialog-ErrorLabel {
+	color: red;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Estilos especificos para impressões                                        */
+/* -------------------------------------------------------------------------- */
+@media print {
+  body {
+    width:auto ! important;
+    height:auto ! important;
+    overflow:visible ! important;
+  }
+  
+
+  * {
+    overflow:visible ! important;
+  }
+  
+  .ugat-Menu {
+    display:none;
+  }
+  
+  .ugat-Modulo {
+    position:static ! important;
+    overflow:visible ! important;
+  }
+
+  .ugat-Controller {
+    display:none;
+  }
+
+  .ugat-Work {
+    position:static ! important;
+    overflow:visible ! important;
+  }
+
+  .ugat-WorkPanel {
+    position:static ! important;
+    overflow:visible ! important;
+  }
+  
+  .ugat-Form {
+    position:static ! important;
+    overflow:visible ! important;
+  }
+
+  .ucpgwt-MVCTable {
+  	display:block ! important;
+  }
+  
+  .ucpgwt-DefaultTableCellRenderer {
+    overflow:hidden ! important;
+  }
+  
+  .ucpgwt-TableSorterModelModel-HeaderCellRenderer {
+    overflow:hidden ! important;
+  }
+  
+  .ucpgwt-PropertiesPanel {
+    position:static ! important;
+    overflow:visible ! important;
+  }
+  
+}
