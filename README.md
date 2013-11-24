@@ -9,4 +9,5 @@ Here are the features:
 - Screen history managment and routing
 - Application event bus
 - UI Widgets (eg. MVCTable, EventsCalendar, CMenu, ...)
+- Backend integration (Authentication & service abstraction allows integration with multiple backend languages)
 - Plugins
