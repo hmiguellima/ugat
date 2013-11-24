@@ -36,6 +36,7 @@ import com.google.gwt.user.client.*;
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.ui.HTMLTable.*;
 
+@SuppressWarnings("deprecation")
 public class MVCTable extends Composite implements TableModelListener, ColumnResizeListener, KeyDownHandler, KeyPressHandler, KeyUpHandler {
 	private class ExportBtnClickHandler implements ClickListener {
 		public void onClick(Widget sender) {
@@ -113,33 +114,7 @@ public class MVCTable extends Composite implements TableModelListener, ColumnRes
 	
 	private class TableDataListener implements TableListener {
 		public void onCellClicked(SourcesTableEvents sender, int row, int cell) {
-			//System.out.println("onCellClicked|"+row+"|"+cell);
-			if ( (dataModel==null) || (dataModel.getRowCount()==0))
-				return;
-			if (row!=selectedRow) {
-				if (selectedRow!=-1)
-					renderRow(selectedRow, false);
-				editMode=false;
-				selectedRow=row;
-				selectedColumn=cell;
-				renderRow(selectedRow, true);
-				if (!tableDataHasFocus)
-					tableDataPanel.setFocus(true);
-			} else {
-				if (!editMode) {
-					updateCellStyle(selectedRow, selectedColumn, selectedRow, -1);
-					selectedColumn=cell;
-					if (!tableDataHasFocus)
-						tableDataPanel.setFocus(true);
-					else
-						updateCellStyle(selectedRow, selectedColumn, selectedRow, selectedColumn);
-					enterEditMode();
-				} 
-			}
-			
-			// lets call the registered listeners
-			for (TableListener listener:tableDataListenerList)
-				listener.onCellClicked(sender, row, cell);
+			handleCellClicked(sender, row, cell);
 		}
 	}
 	
@@ -316,6 +291,45 @@ public class MVCTable extends Composite implements TableModelListener, ColumnRes
 	
 	public void addTableListener(TableListener listener) {
 		tableDataListenerList.add(listener);
+	}
+
+	public void handleCellClicked(SourcesTableEvents sender, int row, int cell) {
+		this.handleCellClicked(sender, row, cell, false);
+	}
+	
+	public void handleCellClicked(SourcesTableEvents sender, int row, int cell, boolean forceRedraw) {
+		if ( (dataModel==null) || (dataModel.getRowCount()==0))
+			return;
+		if ( (row!=selectedRow) || (cell!=selectedColumn) || forceRedraw ) {
+			if ( (row!=selectedRow) && (selectedRow!=-1) )
+				renderRow(selectedRow, false);
+			editMode=false;
+			selectedRow=row;
+			selectedColumn=cell;
+			
+			renderRow(selectedRow, true);
+
+			if (!tableDataHasFocus)
+				tableDataPanel.setFocus(true);
+		} else {
+			if (!editMode) {
+				updateCellStyle(selectedRow, selectedColumn, selectedRow, -1);
+				selectedColumn=cell;
+				if (!tableDataHasFocus)
+					tableDataPanel.setFocus(true);
+				else
+					updateCellStyle(selectedRow, selectedColumn, selectedRow, selectedColumn);
+				enterEditMode();
+			} 
+		}
+		
+		// lets call the registered listeners
+		fireCellClicked(sender, row, cell);
+	}
+	
+	public void fireCellClicked(SourcesTableEvents sender, int row, int cell) {
+		for (TableListener listener:tableDataListenerList)
+			listener.onCellClicked(sender, row, cell);
 	}
 	
 	public void cancelEditMode(boolean gainFocus) {
@@ -590,7 +604,6 @@ public class MVCTable extends Composite implements TableModelListener, ColumnRes
 		}
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void setModelAndLayout(final TableModel dataModel, boolean resetLayout) throws Exception {
 		if (dataModel==null)
 			throw new Exception("MVCTable::setModel:model não pode ser null");
@@ -867,7 +880,7 @@ public class MVCTable extends Composite implements TableModelListener, ColumnRes
 		}
 	}
 	
-	private void updateCellStyle(int row, int column, int selectedRow, int selectedColumn) {
+	protected void updateCellStyle(int row, int column, int selectedRow, int selectedColumn) {
 		boolean isSelected;
 
 		if ( (row!=-1) && (column!=-1) ) {

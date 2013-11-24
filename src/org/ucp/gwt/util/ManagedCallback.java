@@ -46,4 +46,8 @@ public class ManagedCallback<T> implements AsyncCallback<T> {
 	public final void cancel() {
 		canceled=true;
 	}
+	
+	protected AsyncManager getManager() {
+		return manager;
+	}
 }

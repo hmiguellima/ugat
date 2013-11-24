@@ -206,6 +206,10 @@ public abstract class ModalDialog implements KeyPressHandler {
 	{
 		cancelarBtn.click();
 	}
+
+	public void setTitle(String title) {
+		dialogImpl.setText(title);
+	}
 	
 	public final void show() {
 		RootPanel.get().add(lightBox);

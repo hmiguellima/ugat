@@ -283,7 +283,7 @@ public class EventsCalendarTable extends MVCTable {
 		if (getCalendarModel().getCalendarMode()==EventsCalendarModel.CALENDARMODE_WEEK) {
 			setColumnAlignment(0, MVCTable.ALIGN_CENTER);
 			setColumnWidth(0, 40);
-			setRowHeight(40);
+			setRowHeight(20);
 			setColumnCellRenderer(0, timeSlotHeaderRenderer);
 			for (int column=1;column<getModel().getColumnCount();column++)
 				setColumnCellRenderer(column, eventRenderer);
