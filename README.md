@@ -1,0 +1,12 @@
+ugat
+====
+
+Micro GWT application toolkit is your tool bag to build awesome single page apps with Google Web Toolkit.
+
+Here are the features:
+
+- MVP helper classes
+- Screen history managment and routing
+- Application event bus
+- UI Widgets (eg. MVCTable, EventsCalendar, CMenu, ...)
+- Plugins
