@@ -271,14 +271,22 @@ public abstract class ModalDialog implements KeyPressHandler {
 		dlg.show();
 	}
 	
-	public static void showPromptDialog(String title, String message, String defaultValue, final String valueRequiredMsg, final ModalDialog_ActionHandler handler) {
+	public static void showPromptDialog(String title, String message, String defaultValue, String[] suggestedOptions, final String valueRequiredMsg, final ModalDialog_ActionHandler handler) {
 		HorizontalPanel hPanel=new HorizontalPanel();
 		VerticalPanel vPanel=new VerticalPanel();
 		final Label errorLabel=new Label("");
-		final SafeTextBox textBox=new SafeTextBox();
+		final SafeTextBox textBox;
 		final ModalDialog dlg=new ModalDialog(title, 450, 180, ModalDialog.BUTTONS_OK_CANCEL) {
 		};
 
+		
+		if (suggestedOptions==null) {
+			textBox=new SafeTextBox();			
+		} else {
+			textBox=new AutoCompleteTextBox();
+			((AutoCompleteTextBox)textBox).setCompletionItems(new SimpleAutoCompletionItems(suggestedOptions));
+		}
+		
 		errorLabel.setStylePrimaryName("ugat-ModalDialog-ErrorLabel");
 		if (valueRequiredMsg!=null)
 			errorLabel.setText(valueRequiredMsg);
@@ -317,7 +325,11 @@ public abstract class ModalDialog implements KeyPressHandler {
 		dlg.show();
 	}	
 
+	public static void showPromptDialog(String title, String message, String defaultValue, String valueRequiredMsg, ModalDialog_ActionHandler handler) {
+		showPromptDialog(title, message, defaultValue, null, valueRequiredMsg, handler);
+	}
+
 	public static void showPromptDialog(String title, String message, String defaultValue, ModalDialog_ActionHandler handler) {
-		showPromptDialog(title, message, defaultValue, null, handler);
+		showPromptDialog(title, message, defaultValue, null, null, handler);
 	}
 }

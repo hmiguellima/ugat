@@ -632,6 +632,9 @@ public class MVCTable extends Composite implements TableModelListener, ColumnRes
     			columnEditorArray[column]=defaultTableCellEditor;
     			columnAlignmentArray[column]=DEFAULT_COLUMN_ALIGNMENT;
     		}
+    		
+    		tableHeader.removeAllRows();
+    		tableData.removeAllRows();
         }
 		
 		DeferredCommand.add(new Command() {
@@ -837,6 +840,9 @@ public class MVCTable extends Composite implements TableModelListener, ColumnRes
 		columnEditorArray=columnEditors;
 		columnAlignmentArray=columnAlignments;
 
+		tableHeader.removeAllRows();
+		tableData.removeAllRows();
+		
 		renderHeader();
 		renderRow(0, false);
 		for (int column=0;column<dataModel.getColumnCount();column++) 

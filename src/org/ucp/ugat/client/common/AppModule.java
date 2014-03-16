@@ -20,6 +20,7 @@ public abstract class AppModule implements HistoryListener {
 	public interface ISecurityPrincipal {
 		public String getUID();
 		public String getName();
+		public Object getUser();
 	}
 	
 	public static final String AUTH_FAILED_MSG="Erro na autenticação"; 
