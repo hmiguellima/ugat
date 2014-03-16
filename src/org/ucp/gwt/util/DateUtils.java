@@ -2,8 +2,8 @@ package org.ucp.gwt.util;
 
 import java.util.*;
 
+@SuppressWarnings("deprecation")
 public class DateUtils {
-	@SuppressWarnings("deprecation")
 	public static String dateTimeToStr(Date dt) {
 		String str;
 
@@ -17,7 +17,6 @@ public class DateUtils {
 		return str;
 	}
 
-	@SuppressWarnings("deprecation")
 	public static String dateToStr(Date dt) {
 		String str;
 
@@ -29,7 +28,6 @@ public class DateUtils {
 		return str;
 	}
 
-	@SuppressWarnings("deprecation")
 	public static Date strToDate(String str) {
 		String[] dateTimeParts;
 		String[] dateParts;
