@@ -6,7 +6,7 @@ Micro GWT application toolkit is your tool bag to build awesome single page apps
 Here are the features:
 
 - MVP helper classes
-- Screen history managment and routing
+- Screen history management and routing
 - Application event bus
 - UI Widgets (eg. MVCTable, EventsCalendar, CMenu, ...)
 - Backend integration (Authentication & service abstraction allows integration with multiple backend languages)
